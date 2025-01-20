@@ -6,7 +6,7 @@ import CustomButton from '@/components/CustomButton'
 
 const General = () => {
     const router = useRouter()
-    const data: { id: string; name: string; path: "/" | `/?${string}` }[] = [{ id: '1', name: 'Home', path: '/' }];
+    const data: { id: string; name: string; path: "/" | `/?${string}` }[] = [{ id: '1', name: 'Home', path: '/' }, { id: '2', name: 'Video', path: '/videoplayer' }];
     return (
         <ImageBackground style={styles.bg} source={background}>
             <View style={styles.headerview}>
