@@ -8,7 +8,7 @@ interface CustomButtonProps {
     containerStyles?: string;
     mymarginHorizontal?: number
 }
-const CustomButton = ({ onPress, title, textStyles = "", mymarginHorizontal=20 }: CustomButtonProps) => {
+const CustomButton = ({ onPress, title, textStyles = "", mymarginHorizontal = 20 }: CustomButtonProps) => {
     return (
         <TouchableOpacity
             activeOpacity={0.7} style={[styles.touchableopacity, { marginHorizontal: mymarginHorizontal }]} onPress={onPress}>
