@@ -12,12 +12,13 @@ const CustomButton = ({ onPress, title, textStyles = "", mymarginHorizontal = 20
     return (
         <TouchableOpacity
             activeOpacity={0.7} style={[styles.touchableopacity, { marginHorizontal: mymarginHorizontal }]} onPress={onPress}>
-            <Text className={`font-semibold text-large ${textStyles}`}>{title}</Text>
+            <Text>{title}</Text>
         </TouchableOpacity>
     )
 }
 const styles = StyleSheet.create({
-    touchableopacity: { backgroundColor: 'white', borderRadius: 16, minHeight: 62, justifyContent: 'center', alignItems: 'center' }, text: {
+    touchableopacity: { backgroundColor: 'white', borderRadius: 16, minHeight: 62, justifyContent: 'center', alignItems: 'center' },
+    text: {
         fontWeight: '600',
         fontSize: 18,
     },

@@ -5,7 +5,7 @@ import { useRouter } from 'expo-router';
 import CustomButton from '@/components/CustomButton'
 
 const General = () => {
-    const data = [{ id: '1', name: 'Home', path: '/' }, { id: '1', name: 'Home', path: '/' }, { id: '1', name: 'Home', path: '/' }, { id: '1', name: 'Home', path: '/' }, { id: '1', name: 'Home', path: '/' }, { id: '1', name: 'Home', path: '/' }, { id: '1', name: 'Home', path: '/' }, { id: '1', name: 'Home', path: '/' }, { id: '1', name: 'Home', path: '/' }, { id: '1', name: 'Home', path: '/' }, { id: '1', name: 'Home', path: '/' },]
+    const data = [{ id: '1', name: 'Home', path: '/' }]
     const router = useRouter()
     return (
         <ImageBackground style={styles.bg} source={background}>
