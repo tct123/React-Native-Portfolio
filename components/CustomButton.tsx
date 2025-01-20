@@ -6,11 +6,12 @@ interface CustomButtonProps {
     title: string;
     textStyles?: string;
     containerStyles?: string;
+    buttonMargin?: number;
 }
-const CustomButton = ({ onPress, title, textStyles = "", containerStyles = "" }: CustomButtonProps) => {
+const CustomButton = ({ onPress, title, textStyles = "", buttonMargin = 10 }: CustomButtonProps) => {
     return (
         <TouchableOpacity
-            activeOpacity={0.7} style={styles.touchableopacity} onPress={onPress}>
+            activeOpacity={0.7} style={[styles.touchableopacity, { marginBottom: buttonMargin }]} onPress={onPress}>
             <Text className={`font-semibold text-large ${textStyles}`}>{title}</Text>
         </TouchableOpacity>
     )
