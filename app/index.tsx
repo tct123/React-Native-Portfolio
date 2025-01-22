@@ -3,6 +3,7 @@ import { Text, View, StyleSheet, ImageBackground } from "react-native";
 import { StatusBar } from "react-native";
 import background from "@/assets/images/background.jpg";
 import { useRouter } from "expo-router";
+import { Asset } from "expo-asset";
 
 export default function Index() {
   const router = useRouter()
