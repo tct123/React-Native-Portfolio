@@ -41,6 +41,9 @@
           "supportsBackgroundPlayback": true,
           "supportsPictureInPicture": true
         }
+      ],
+      [
+        "expo-av"
       ]
     ],
     "experiments": {
