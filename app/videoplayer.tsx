@@ -4,8 +4,8 @@ import { useVideoPlayer, VideoView } from 'expo-video'
 import { Asset } from 'expo-asset'
 
 const Videoplayer = () => {
-    const video= Asset.fromModule(require("../assets/video/video.mp4")).uri
-    const player=useVideoPlayer(video,(player)=>{
+    const video = Asset.fromModule(require("../assets/video/video.mp4")).uri
+    const player = useVideoPlayer(video, (player) => {
         player.play()
     })
     return (
