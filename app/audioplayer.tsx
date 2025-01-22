@@ -5,10 +5,9 @@ import { Asset } from 'expo-asset'
 
 const Audioplayer = async () => {
     await Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
-    const MyAudio = Asset.fromModule(require("../assets/audio/happy-birthday-whistled.wav")).uri;
-    const { sound: player } = await Audio.Sound.createAsync(
-        { uri: MyAudio }, { shouldPlay: true }
-    )
+    const MyAudio = Asset.fromURI(require("../assets/audio/happy-birthday-whistled.wav")).uri;
+    const player = new Audio.Sound();
+    player.loadAsync({ uri: MyAudio })
     player.playAsync()
     return (
         <View>
