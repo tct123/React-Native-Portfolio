@@ -18,7 +18,9 @@ const Videoplayer = () => {
 
 export default Videoplayer
 
-const styles = StyleSheet.create({video:{
-    width: Dimensions.get("window").width,
-    height: Dimensions.get("window").height
-}})
+const styles = StyleSheet.create({
+    video: {
+        width: Dimensions.get("window").width,
+        height: Dimensions.get("window").height
+    }
+})
