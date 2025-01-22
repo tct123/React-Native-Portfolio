@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ImageBackground, FlatList } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground, FlatList, Dimensions } from 'react-native'
 import React from 'react'
 import background from "@/assets/images/background.jpg";
 import { useRouter } from 'expo-router';
@@ -26,7 +26,11 @@ const General = () => {
     )
 }
 const styles = StyleSheet.create({
-    bg: { flex: 1, resizeMode: "cover" },
+    bg: {
+        flex: 1, resizeMode: "cover",
+        width: Dimensions.get("window").width,
+        height: Dimensions.get("window").height
+    },
     container: {
         flex: 1, justifyContent: "center", margin: 7,
     },

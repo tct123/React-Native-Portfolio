@@ -1,5 +1,5 @@
 import CustomButton from "@/components/CustomButton";
-import { Text, View, StyleSheet, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, ImageBackground, Dimensions } from "react-native";
 import { StatusBar } from "react-native";
 import background from "@/assets/images/background.jpg";
 import { useRouter } from "expo-router";
@@ -23,7 +23,11 @@ export default function Index() {
   );
 }
 const styles = StyleSheet.create({
-  bg: { flex: 1, resizeMode: "cover" },
+  bg: {
+    flex: 1, resizeMode: "cover",
+    width: Dimensions.get("window").width,
+    height: Dimensions.get("window").height
+  },
   topview: { flex: 1, justifyContent: "center", alignItems: "center" },
   bottomview: { flex: 1, justifyContent: "center" },
   title: { flex: 1, fontSize: 50, fontWeight: "bold" },
