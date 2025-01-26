@@ -1,16 +1,16 @@
 import { View, Text, StyleSheet, ImageBackground, FlatList, Dimensions } from 'react-native'
 import React from 'react'
-import background from "@/assets/images/background.jpg";
 import { useRouter } from 'expo-router';
 import CustomButton from '@/components/CustomButton'
 
 const General = () => {
     const router = useRouter()
+    const background = require("../assets/images/background.jpg")
     const data: { id: string; name: string; path: "/" | `/?${string}` }[] = [
         { id: '1', name: 'Home', path: '/' },
         { id: '2', name: 'Video', path: '/videoplayer' },
         { id: '3', name: 'Audio', path: '/audioplayer' },
-        { id: '4', name: 'Notifications', path: '/notificationspage' }
+        { id: '4', name: 'Lottie', path: '/lottiepage' }
     ];
     return (
         <ImageBackground style={styles.bg} source={background}>

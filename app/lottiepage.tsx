@@ -1,12 +1,15 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, StyleSheet, Button } from 'react-native'
+import React, { useEffect, useRef } from 'react'
+import LottieView from "lottie-react-native"
 
-const lottiepage = () => {
-  return (
-    <View>
-      <Text>lottiepage</Text>
-    </View>
-  )
+const Lottiepage = () => {
+    const animation = useRef<LottieView>(null)
+    useEffect(() => { })
+    return (
+        <View>
+            <LottieView autoPlay ref={animation} style={{ width: 200, height: 200 }} source={require("../assets/lottie/startscreen.json")} />
+        </View>
+    )
 }
 
-export default lottiepage
+export default Lottiepage
