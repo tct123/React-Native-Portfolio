@@ -9,7 +9,8 @@ const General = () => {
     const data: { id: string; name: string; path: "/" | `/?${string}` }[] = [
         { id: '1', name: 'Home', path: '/' },
         { id: '2', name: 'Video', path: '/videoplayer' },
-        { id: '3', name: 'Audio', path: '/audioplayer' }
+        { id: '3', name: 'Audio', path: '/audioplayer' },
+        { id: '4', name: 'Audio', path: '/audioplayer' }
     ];
     return (
         <ImageBackground style={styles.bg} source={background}>
