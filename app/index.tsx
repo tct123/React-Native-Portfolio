@@ -1,11 +1,10 @@
 import CustomButton from "@/components/CustomButton";
 import { Text, View, StyleSheet, ImageBackground, Dimensions } from "react-native";
 import { StatusBar } from "react-native";
-import background from "@/assets/images/background.jpg";
 import { useRouter } from "expo-router";
-import { Asset } from "expo-asset";
 
 export default function Index() {
+  const background = require("../assets/images/background.jpg");
   const router = useRouter()
   return (
     <ImageBackground style={styles.bg}
