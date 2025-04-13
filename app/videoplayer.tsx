@@ -1,6 +1,6 @@
 import { Dimensions, StyleSheet, View } from 'react-native'
 import React from 'react'
-import { useVideoPlayer, VideoView } from 'expo-video'
+import { useVideoPlayer, VideoView, } from 'expo-video'
 import { Asset } from 'expo-asset'
 
 const Videoplayer = () => {
