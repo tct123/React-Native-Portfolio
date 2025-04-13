@@ -11,7 +11,7 @@ const Videoplayer = () => {
     })
     return (
         <View>
-            <VideoView player={player} style={styles.video} allowsFullscreen allowsPictureInPicture />
+            <VideoView player={player} style={styles.videoView} allowsFullscreen allowsPictureInPicture />
         </View>
     )
 }
@@ -19,8 +19,11 @@ const Videoplayer = () => {
 export default Videoplayer
 
 const styles = StyleSheet.create({
-    video: {
+    videoView: {
         width: Dimensions.get("window").width,
-        height: Dimensions.get("window").height
-    }
+        height: Dimensions.get("window").height,
+        justifyContent: "center",
+        alignContent: "center",
+        alignItems: "center"
+    },
 })
