@@ -10,7 +10,8 @@ const General = () => {
         { id: '1', name: 'Home', path: '/' },
         { id: '2', name: 'Video', path: '/videoplayer' },
         { id: '3', name: 'Audio', path: '/audioplayer' },
-        { id: '4', name: 'Lottie', path: '/lottiepage' }
+        { id: '4', name: 'Lottie', path: '/lottiepage' },
+        { id: '5', name: 'Notification', path: '/notificationspage' }
     ];
     return (
         <ImageBackground style={styles.bg} source={background}>
