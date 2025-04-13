@@ -16,7 +16,7 @@ export default function Index() {
         <Text style={styles.title}>My Portfolio</Text>
       </View>
       <View style={styles.bottomview}>
-        <CustomButton onPress={() => router.push("/general")} title={"Test button"} />
+        <CustomButton onPress={() => router.push("/general")} title={"Start"} />
       </View>
     </ImageBackground>
   );
