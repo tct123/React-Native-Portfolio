@@ -1,18 +1,12 @@
 import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
-import { Audio } from 'expo-audio';
+import { useAudioPlayer } from 'expo-audio';
+
+const audiosource = require('../assets/audio/happy-birthday-whistled.wav');
 
 const Audioplayer = () => {
-    useEffect(() => {
-        const loadAudio = async () => {
-            const { sound: playbackObject } = await Audio.Sound.createAsync(
-                require('../assets/audio/happy-birthday-whistled.wav'),
-                { shouldPlay: true }
-            );
-        };
-
-        loadAudio();
-    }, []);
+    const player = useAudioPlayer(audiosource);
+    player.play();
 
     return (
         <View>
