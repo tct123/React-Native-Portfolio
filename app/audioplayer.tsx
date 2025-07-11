@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
-import { Audio } from 'expo-av';
+import { Audio } from 'expo-audio';
 
 const Audioplayer = () => {
     useEffect(() => {
