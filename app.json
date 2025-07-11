@@ -53,7 +53,9 @@
       ],
       [
         "@react-native-tvos/config-tv"
-      ]
+      ],
+      "expo-font",
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true
