@@ -1,15 +1,48 @@
-import { View, Text, StyleSheet, Button } from 'react-native'
-import React, { useEffect, useRef } from 'react'
-import LottieView from "lottie-react-native"
+import { useRef, useEffect } from 'react';
+import { Button, StyleSheet, View } from 'react-native';
+import LottieView from 'lottie-react-native';
 
-const Lottiepage = () => {
-    const animation = useRef<LottieView>(null)
-    useEffect(() => { })
+export default function App() {
+    const animation = useRef<LottieView>(null);
+    useEffect(() => {
+        // You can control the ref programmatically, rather than using autoPlay
+        // animation.current?.play();
+    }, []);
+
     return (
-        <View>
-            <LottieView autoPlay ref={animation} style={{ width: 200, height: 200 }} source={require("../assets/lottie/startscreen.json")} />
+        <View style={styles.animationContainer}>
+            <LottieView
+                autoPlay
+                ref={animation}
+                style={{
+                    width: 200,
+                    height: 200,
+                    backgroundColor: '#eee',
+                }}
+                // Find more Lottie files at https://lottiefiles.com/featured
+                source={require('../assets/lottie/startscreen.json')}
+            />
+            <View style={styles.buttonContainer}>
+                <Button
+                    title="Restart Animation"
+                    onPress={() => {
+                        animation.current?.reset();
+                        animation.current?.play();
+                    }}
+                />
+            </View>
         </View>
-    )
+    );
 }
 
-export default Lottiepage
+const styles = StyleSheet.create({
+    animationContainer: {
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1,
+    },
+    buttonContainer: {
+        paddingTop: 20,
+    },
+});

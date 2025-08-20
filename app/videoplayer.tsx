@@ -11,7 +11,7 @@ const Videoplayer = () => {
     })
     return (
         <View>
-            <VideoView player={player} style={styles.videoView} allowsFullscreen allowsPictureInPicture />
+            <VideoView player={player} style={styles.videoView} allowsFullscreen={true} allowsPictureInPicture />
         </View>
     )
 }

@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, ImageBackground, FlatList, Dimensions } from 'react-native'
+import { View, Text, StyleSheet, ImageBackground, FlatList, Dimensions, SafeAreaView } from 'react-native'
 import React from 'react'
 import { useRouter } from 'expo-router';
 import CustomButton from '@/components/CustomButton'
