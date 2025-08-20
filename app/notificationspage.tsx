@@ -7,11 +7,13 @@ import { SchedulableTriggerInputTypes } from 'expo-notifications';
 
 Notifications.setNotificationHandler({
     handleNotification: async () => ({
-        shouldShowAlert: true,
         shouldPlaySound: false,
         shouldSetBadge: false,
+        shouldShowBanner: true,
+        shouldShowList: true,
     }),
 });
+
 
 export default function App() {
     const background = require("../assets/images/background.jpg")
@@ -20,8 +22,6 @@ export default function App() {
     const [notification, setNotification] = useState<Notifications.Notification | undefined>(
         undefined
     );
-    const notificationListener = useRef<Notifications.EventSubscription>();
-    const responseListener = useRef<Notifications.EventSubscription>();
 
     useEffect(() => {
         registerForPushNotificationsAsync().then(token => token && setExpoPushToken(token));
@@ -29,22 +29,19 @@ export default function App() {
         if (Platform.OS === 'android') {
             Notifications.getNotificationChannelsAsync().then(value => setChannels(value ?? []));
         }
-        notificationListener.current = Notifications.addNotificationReceivedListener(notification => {
+        const notificationListener = Notifications.addNotificationReceivedListener(notification => {
             setNotification(notification);
         });
 
-        responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
+        const responseListener = Notifications.addNotificationResponseReceivedListener(response => {
             console.log(response);
         });
 
         return () => {
-            notificationListener.current &&
-                Notifications.removeNotificationSubscription(notificationListener.current);
-            responseListener.current &&
-                Notifications.removeNotificationSubscription(responseListener.current);
+            notificationListener.remove();
+            responseListener.remove();
         };
     }, []);
-
     return (
         <ImageBackground style={styles.bg}
             source={background} resizeMode="cover">
